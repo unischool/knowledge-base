@@ -4,6 +4,11 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view></router-view>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -13,6 +18,12 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
+
+<script lang="ts">
+export default {
+  name: 'App',
+};
+</script>
 
 <style scoped>
 .logo {
